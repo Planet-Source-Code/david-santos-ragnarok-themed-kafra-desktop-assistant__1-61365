@@ -1,0 +1,232 @@
+What's New
+=============================
+6/27/2005
+-----------------------------
+- Implemented proper screen snapping!
+- UberRagButton Style renamed to Caption
+- UberRagbutton width can now be modified!
+  Also uses a resource control (included) to pool the images needed by the
+  UberRagButtons in order to reduce memory consumption.
+
+11/24/2004
+-----------------------------
+- Ouch.  Almost a year in development and nothing much really added to the project.
+- Modified the RagButton control into the UberRagBautton control :)
+
+  Basically, the old control only allowed button styles exactly like the ones used by ragnarok.
+  It was OK for Rag-style apps, but lacked flexibility, and since it was based on Bitmaps,
+  took a bit of space and memory.
+  
+  Now the UberRagButton uses a bitmap for the background.  The Style property is your standard Caption.
+  You can set it during run time or design time.
+   
+  It's still limited in size, however.  It'd be nice if you could stretch it wider.
+  Blitting code as used the RagList would be needed to stretch the bitmap.
+
+- Snapping code needs work.  I need a more general method of snapping. And smart-stacking would be 
+  nice as well.
+
+
+7/19/04
+-----------------------------
+- More work on the snapping code
+
+7/12/2004
+-----------------------------
+- Implemented basic Kafra Planner, Kafra Tools windows
+  Planner will have alarm functions, date keeping, organizing...
+  Tools will house accessory things...
+- Added snapping to MemoPad, will snap to edges of screen, and to planner 
+  and tools windows when within 10 pixels.
+  (Buggy, snap-off does not occur unless acceleration is reasonably high (>10 pixels))
+- Added movement limitation to Kafra, can't drag above taskbar anymore.
+
+7/11/04
+-----------------------------
+- Modified MemoPad for a larger space for both Memopad and Storage area
+- Added buttons "Memo" and "Close"
+
+  (Use the Memo button to switch between the memopad and the Storage area.
+   Memo button will be highlighted when memo mode is activated.)
+
+- Removed shadows for MemoPad
+
+7/5/2004
+-----------------------------
+After a two-month lapse....
+- Fixed minor Windows XP Autorun/Always on top menu bug
+  (Registry wasn't being read correctly.)
+
+
+5/18/04
+-----------------------------
+- Added blink animations for Blossom and Jasmine (Sakura Edition only)
+- removed ani.txt dependency
+
+
+5/17/04
+-----------------------------
+- Removed RagButton dependency
+- Fixed a bug where messages aren't deleted.
+- Added shadows to dialog boxes 
+- Fixed window transparency code, Kafra won't suddenly go transparent anymore.
+  (thanks to vbaccelerator.com's wonderful tutorials on subclassing and layered windows)
+
+
+5/13/04
+-----------------------------
+- Planning to remove Ragbutton.OCX.  Its a waste of memory to load all the button styles
+  I'll just go the old method.
+- Fixed up transparent region code to read from a resource. Handy thing, that.
+  Kafra bitmaps are now also stored in the resource, instead of in an imagelist.
+  I was hoping to reduce overhead, but memory consumption is still greater than 
+  my wishful goal of 4MB
+- Added window transparencies for all you Windows 2000 and XP users :) (buggy)
+
+
+5/12/04
+------------------------------
+- (Sakura Edition only)
+  First implementation of Kafra blink animations, only with Pavianne right now.
+  The file ani.txt needs to be in the same directory (and don't mess with it!)
+- MSCOMCTL.OCX is now a separate download
+- Pregenerated transparent region support added, and now Kafra changes happen in the blink of
+  an eye!
+
+
+5/11/04
+------------------------------
+- Added blurb window notification at startup.
+  May remove this if deemed unnecessary.
+- Cleaned up the transparent region creation code.
+  I didn't notice this bug until I added the blurb, when I noticed that the leading 
+  (leftmost) edges were missing. This is why the Kafra outlines seemed to be a bit ragged.
+- Added Option Explicit to code, in hopes of lowering the memory usage, but it still uses
+  around 7 to 8 meg of RAM. This is gonna be my next target area, especially for those of
+  you who are worried about how much RAM is used by a simple desktop toy.
+- Added Ragnarok-stlye pill buttons.  These are implemented as an OCX, so you need the 
+  RagButton.ocx file in the same folder as KDA
+
+  You can also use RagButtons in your own Visual Basic Programs.  Just add the OCX as a
+  Control in Project >Components >Control Tab >Browse
+
+
+5/7/04
+------------------------------
+- KDA window dragging now works in XP! Hehehe.
+  Actually, it was a little bug in the code.  The original code didn't pass
+  the paramaters to SendMessage to pick up the window as Longs, because they weren't
+  explicitly declared as Longs. After using the predefined constants WM_SYSCOMMAND
+  and SC_CLICKMOVE, all went well.  
+  
+  Well, you learn something new everyday!
+
+  Yes, I know I said I hated XP , but I'm now using it for software development and testing.
+  Only because all you you people are using it! 
+
+ 
+2/17/04
+------------------------------
+- KDA Sakura Edition now available!
+  Thanks to Lance for extracting and sending me the pics!
+
+- Was having some problems creating transparent regions for the new Kafra
+  but finally saw and fixed the bug in the code.
+
+
+2/2/04
+------------------------------
+- Some optimizations. KDA will save the memo database 
+  only if a new memo was entered.
+
+
+2/1/04
+------------------------------
+- Got the comodo patch and added the last(?) Kafra,
+  which in the Philippines here is called Sampaguita.
+
+- This release is still buggy.  It SEEMS to cause crashes 
+  on my computer.  Memory seems to suddenly get all used up.
+  Or maybe it's all the programs I'm running simultaneously.
+  At any rate, if your computer crashes due to this program,
+  don't blame me, you have been warned.
+
+- Created a whole line of animated ragnarok cursors, and
+  packaged them with this release.
+  If you install these cursors in the KafraDesk folder,
+  KDA will use them when she has the mouse. 
+
+
+1/28/04
+------------------------------
+- Added the Ragnarok pointer cursor (not animated) and hand cursors
+  (open and closed) to the pack for your personal use, absolutely
+  free of charge. KDA now uses these icons when the mouse is over it.
+
+- Kafra can be moved along the bottom of the screen if she's covering 
+  something. Click and drag.
+
+- Dropping an item on the kafra will also store the item in the current 
+  path.
+
+- Lots of bugfixes.  Should be ready for a real release now!
+
+
+1/27/04
+------------------------------
+- Added Kafra names. Thanks to Hentai Master for the info!
+
+- Fixed Kafra randomize code to make sure next Kafra isn't the same one
+
+- Added MSCOMCTL.OCX to make sure you have the right version installed
+
+- Added Ragnarok cursors.  Very small because I'm using 64 x 64 icons.
+  I can't make real 32 x 32 cursors with their hot spot offset to the top left.
+
+
+1/24/04
+------------------------------
+- Added nifty icons to storage folder
+
+- Made storage folder more like file browser. Folders are 
+  opened in storage, not in a new window.
+
+- Added system tray icon. seems a bit off-color
+
+- Changed buttons to Ragnarok-style.
+
+- Added proper close and minimize buttons. Top left button now
+  pops up extra menu.
+
+- All kafra images are stored again in the application, so we 
+  only need one file.  Reason for excessive file size before
+  was because the images were BMPs in 24-bit color format.
+  Total file size now down to 470KB
+
+- Added Registry based autorun, set via the right-click menu
+
+- little tweaking here and there
+
+
+1/15/04
+-----------------------
+- Added storage folder. Dropping files/folders into the storage box 
+  will move them into the Kafra's Storage directory.  No way to move 
+  them out yet. Can open folders, most associated files, links to 
+  applications.  Links to folders don't seem to open at all.
+
+
+1/13/04
+-----------------------
+- Converted images to gifs and had them loaded externally.  Program now 
+  uses less space. Loading time for a kafra seems slightly slower.  
+  If only there was a way to save and load regions directly into memory.
+
+
+1/13/04
+-----------------------
+- Pretty simple and straightforward.  From some downloaded code for 
+  creating non-rectangular forms, I edited it to support multiple 
+  images, and faster region creation.
+
+- Added memopad function via a Ragnarok-style popup form.

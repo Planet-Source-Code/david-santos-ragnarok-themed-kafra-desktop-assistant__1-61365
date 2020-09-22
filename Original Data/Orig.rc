@@ -1,0 +1,32 @@
+#include "regions.h"
+
+//Kafra Regions
+IDR_101                 RCDATA  DISCARDABLE     "Regions\Pavianne.rgn"
+IDR_102                 RCDATA  DISCARDABLE     "Regions\Blossom.rgn"
+IDR_103                 RCDATA  DISCARDABLE     "Regions\Jasmine.rgn"
+IDR_104                 RCDATA  DISCARDABLE     "Regions\Roxie.rgn"
+IDR_105                 RCDATA  DISCARDABLE     "Regions\Leila.rgn"
+IDR_106                 RCDATA  DISCARDABLE     "Regions\Curly Sue.rgn"
+IDR_107                 RCDATA  DISCARDABLE     "Regions\Sampaguita.rgn"
+IDR_108                 RCDATA  DISCARDABLE     "Regions\blurb.rgn"
+
+//Kafra Bitmaps
+IDR_111                 BITMAP  DISCARDABLE     "Bitmaps\Pavianne.bmp"
+IDR_112                 BITMAP  DISCARDABLE     "Bitmaps\Blossom.bmp"
+IDR_113                 BITMAP  DISCARDABLE     "Bitmaps\Jasmine.bmp"
+IDR_114                 BITMAP  DISCARDABLE     "Bitmaps\Roxie.bmp"
+IDR_115                 BITMAP  DISCARDABLE     "Bitmaps\Leila.bmp"
+IDR_116                 BITMAP  DISCARDABLE     "Bitmaps\Curly Sue.bmp"
+IDR_117                 BITMAP  DISCARDABLE     "Bitmaps\Sampaguita.bmp"
+
+//Kafra name strings
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "Pavianne"
+    IDS_STRING2             "Blossom"
+    IDS_STRING3             "Jasmine"
+    IDS_STRING4             "Roxie"
+    IDS_STRING5             "Leila"
+    IDS_STRING6             "Curly Sue"
+    IDS_STRING7             "Sampaguita"
+END
